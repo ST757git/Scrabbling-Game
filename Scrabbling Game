@@ -1,36 +1,9 @@
-game_flow: 
-  start:
-    type: start
-    next: validate_word_length
-  validate_word_length:
-    type: process
-    description: Game validates a 5-character word with a maximum of 12 characters
-    next: generate_scrambled_word
-  generate_scrambled_word:
-    type: process
-    description: Game launches a random scrambled word
-    next: request_player_guess
-  request_player_guess:
-    type: input
-    description: Request the player to guess and enter the word
-    next: check_guess
-  check_guess:
-    type: decision
-    condition: guess_correct
-    'yes': player_wins
-    'no': check_attempts
-  check_attempts:
-    type: decision
-    condition: attempts_remaining < 3
-    'yes': prompt_try_again
-    'no': player_loses
-  prompt_try_again:
-    type: process
-    description: Prompts the player to try again
-    next: request_player_guess
-  player_wins:
-    type: end
-    outcome: Player wins
-  player_loses:
-    type: end
-    outcome: 'Fails 3 attempts, player loses'
+words:
+  - python
+  - developer
+  - algorithm
+  - function
+  - variable
+  - iteration
+  - condition
+  - scramble
