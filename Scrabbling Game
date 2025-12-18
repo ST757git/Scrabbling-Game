@@ -34,3 +34,4 @@ game_flow:
   player_loses:
     type: end
     outcome: 'Fails 3 attempts, player loses'
+
