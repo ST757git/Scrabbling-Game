@@ -1,4 +1,4 @@
-game_flow:
+game_flow: 
   start:
     type: start
     next: validate_word_length
